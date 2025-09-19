@@ -14,7 +14,7 @@ namespace SprintMod
 
         public void OnSwitchScene(int buildindex, string scene)
         {
-            player = GameObject.FindObjectOfType<FirstPersonController>();
+            player = GameManager.instance._firstPersonController;
             if (player == null)
             {
                 Core.Logger.Msg("Player not found in scene: " + scene);
